@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css" />
+
+    <title>Weather Forecast API</title>
+</head>
+<body>
+    <h2>CONNECTED TO WEATHER FORECAST API</h2>
+    <section>
+        <h4 class="params">City Name: {{ weather.name }}</h4>
+        <h4 class="params">Country: {{ weather.country }}</h4>
+        <h4 class="params">Temperature: {{ weather.temperature }} °C</h4>
+        <h4 class="params">Feel Like: {{ weather.feels_like }} °C</h4>
+        <h4 class="params">Description: {{ weather.description }}</h4>
+        <h4 class="params">Humidity: {{ weather.humidity }}%</h4>
+        <h4 class="params">Wind Speed: {{ weather.wind_speed }} km/h</h4>
+    </section>
+</body>
+</html>
